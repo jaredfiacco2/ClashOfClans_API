@@ -45,7 +45,7 @@
 
 - This project, also was deployed entirely in GCP. It uses Cloud Scheduler and Pub/Sub to trigger a Cloud Functions 2x daily. This Cloud Function runs Python code that pulls data from Clash of Clans API through a static API provided by the Virtual Private Cloud, Cloud NAT & Cloud Router. The API data is stored in BigQuery and served as a Data Studio report emailed daily.
 
-- Note: There is a small cost to running the VPC/NAT/Router combo. It's the only way to get a static IP egress needed for the Clash of Clans API call. My estimates are ~$13/month. Depending on how many clans you lead, how serious of a player you are,and if you use the VPC for another project, it might be worth the investment.
+- Note: There is a small cost to running the VPC/NAT/Router combo. It's the only way to get a static IP egress needed for the Clash of Clans API call. My estimates are ~$13/month. Depending on how many clans you lead, how serious of a player you are, and if you use the VPC for another project, it might be worth the investment.
 
 <img src="images\Cloud_functions_api_architecture.png" alt="Process Map"/>
 
