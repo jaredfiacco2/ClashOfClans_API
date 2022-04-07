@@ -1,6 +1,4 @@
 import pandas as pd 
-import json, requests, urllib.parse
-from datetime import datetime, timezone
 import apiHelpers
 
 # API Token & Player/Clan Tags

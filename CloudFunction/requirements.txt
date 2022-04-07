@@ -1,0 +1,7 @@
+# Function dependencies, for example:
+# package>=version
+pandas 
+requests
+datetime
+pandas-gbq
+google-auth
