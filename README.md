@@ -6,8 +6,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/jaredfiacco2/ComputerMonitoring_IOT">
-    <img src="images/coc.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/jaredfiacco2/ClashOfClans_API">
+    <img src="images/coc.png" alt="Logo" width="120" height="75">
   </a>
 
   <h3 align="center">Clash of Clans API - Automatically ETL, Store, Report Data with GCP</h3>
@@ -47,7 +47,7 @@
 
 - Note: There is a small cost to running the VPC/NAT/Router combo. It's the only way to get a static IP egress needed for the Clash of Clans API call. My estimates are ~$13/month. Depending on how many clans you lead, how serious of a player you are,and if you use the VPC for another project, it might be worth the investment.
 
-<img src="images\cloud_functions_api_architecture.png" alt="Process Map"/>
+<img src="images\Cloud_functions_api_architecture.png" alt="Process Map"/>
 
 ### Built With
 
