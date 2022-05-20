@@ -39,22 +39,22 @@ def getSingleClan(event, context):
     pa['event_id'] = event_id
     pa.columns = [c.replace(".", "_").replace("&", "and").replace("!", "").replace(" ", "_").replace("-", "_") for c in list(pa.columns)]
     pa = pa.reset_index(level=0)
-    pandas_gbq.to_gbq(pa, 'my_current_clan_stats.player-achievements', project_id=project_id, credentials=credentials, if_exists='append')
+    pandas_gbq.to_gbq(pa, 'my_current_clan_stats.achievements', project_id=project_id, credentials=credentials, if_exists='append')
     #player troops
     pt = pt.reset_index().pivot_table(index='player_tag', columns='name', values='level')
     pt['event_id'] = event_id
     pt.columns = [c.replace(".", "").replace(" ", "_") for c in list(pt.columns)]
     pt = pt.reset_index(level=0)
-    pandas_gbq.to_gbq(pt, 'my_current_clan_stats.player-troops', project_id=project_id, credentials=credentials, if_exists='append')
+    pandas_gbq.to_gbq(pt, 'my_current_clan_stats.troops', project_id=project_id, credentials=credentials, if_exists='append')
     #player heroes
     ph = ph.reset_index().pivot_table(index='player_tag', columns='name', values='level')
     ph['event_id'] = event_id
     ph.columns = [c.replace(" ", "_") for c in list(ph.columns)]
     ph = ph.reset_index(level=0)
-    pandas_gbq.to_gbq(ph, 'my_current_clan_stats.player-heroes', project_id=project_id, credentials=credentials, if_exists='append')
+    pandas_gbq.to_gbq(ph, 'my_current_clan_stats.heroes', project_id=project_id, credentials=credentials, if_exists='append')
     #player spells
     ps = ps.reset_index().pivot_table(index='player_tag', columns='name', values='level')
     ps['event_id'] = event_id
     ps.columns = [c.replace(" ", "_") for c in list(ps.columns)]
     ps = ps.reset_index(level=0)
-    pandas_gbq.to_gbq(ps, 'my_current_clan_stats.player-spells', project_id=project_id, credentials=credentials, if_exists='append')
+    pandas_gbq.to_gbq(ps, 'my_current_clan_stats.spells', project_id=project_id, credentials=credentials, if_exists='append')
